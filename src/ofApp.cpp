@@ -29,7 +29,7 @@ void ofApp::setup(){
     loc_x2 = 512;
     loc_y2 = 200;
     loc_z2 = -1000;
-   
+    
     loc_x3 = 768;
     loc_y3 = 384;
     loc_z3 = -1000;
@@ -76,7 +76,7 @@ void ofApp::setup(){
 
 //--------------------------------------------------------------
 void ofApp::update(){
-
+    
     loc_x1 = loc_x1 + 0;
     loc_y1 = loc_y1 + 0;
     loc_z1 = loc_z1 + 8;
@@ -163,38 +163,38 @@ void ofApp::draw(){
     ofBackground(0);
     
     if(drawInformation){
-    ofSetColor(255);
-    font1.drawString(ofToString(Enemy) + "enemys", 450, 35);
+        ofSetColor(255);
+        font1.drawString(ofToString(Enemy) + "enemys", 450, 35);
     }
     
     //Player
     ofPushMatrix();
     if(drawPlayer){
-    ofSetColor(31, 63, 255);
-    ofDrawCircle(mouseX, mouseY,20);
-    ofSetColor(116, 193, 206);
-    sphere.set(6,10);
-    sphere.setPosition(mouseX, mouseY, z);
-    sphere.draw();
-    z -= velocity;
-    if (z == -1000) {
-        z = 0;
-     }
+        ofSetColor(31, 63, 255);
+        ofDrawCircle(mouseX, mouseY,20);
+        ofSetColor(116, 193, 206);
+        sphere.set(6,10);
+        sphere.setPosition(mouseX, mouseY, z);
+        sphere.draw();
+        z -= velocity;
+        if (z == -1000) {
+            z = 0;
+        }
     }
-         
+    
     ofPopMatrix();
     
     //Enemy
     ofPushMatrix();
     if(drawEnemy){
-    ofSetColor(255);
-    box.set(40);
-    box.setPosition(loc_x1, loc_y1, -1000);
-    box.draw();
-    ofSetColor(211, 24, 24);
-    sphere.set(6,10);
-    sphere.setPosition(loc_x1, loc_y1, loc_z1);
-    sphere.draw();
+        ofSetColor(255);
+        box.set(40);
+        box.setPosition(loc_x1, loc_y1, -1000);
+        box.draw();
+        ofSetColor(211, 24, 24);
+        sphere.set(6,10);
+        sphere.setPosition(loc_x1, loc_y1, loc_z1);
+        sphere.draw();
     }
     ofPopMatrix();
     
@@ -290,16 +290,16 @@ void ofApp::draw(){
     ofPopMatrix();
     
     if(Player != 0){
-    HitCheck();
-    HitCheck2();
-    HitCheck3();
-    HitCheck4();
-    HitCheck5();
-    HitCheck6();
-    HitCheck7();
-    HitCheck8();
-    HitCheck9();
-    gameClear();
+        HitCheck();
+        HitCheck2();
+        HitCheck3();
+        HitCheck4();
+        HitCheck5();
+        HitCheck6();
+        HitCheck7();
+        HitCheck8();
+        HitCheck9();
+        gameClear();
     }
     gameOver();
 }
@@ -308,9 +308,9 @@ void ofApp::draw(){
 void ofApp::HitCheck(){
     //敵がプレーヤーに当てる
     if(!(ofDist(mouseX, mouseY, 0, loc_x1, loc_y1, loc_z1)<=23 || ofDist(mouseX, mouseY, 0, loc_x2, loc_y2, loc_z2)<=23
-    || ofDist(mouseX, mouseY, 0, loc_x3, loc_y3, loc_z3)<=23 || ofDist(mouseX, mouseY, 0, loc_x4, loc_y4, loc_z4)<=23
-    || ofDist(mouseX, mouseY, 0, loc_x5, loc_y5, loc_z5)<=23 || ofDist(mouseX, mouseY, 0, loc_x6, loc_y6, loc_z6)<=23
-    || ofDist(mouseX, mouseY, 0, loc_x7, loc_y7, loc_z7)<=23 || ofDist(mouseX, mouseY, 0, loc_x8, loc_y8, loc_z8)<=23)){
+         || ofDist(mouseX, mouseY, 0, loc_x3, loc_y3, loc_z3)<=23 || ofDist(mouseX, mouseY, 0, loc_x4, loc_y4, loc_z4)<=23
+         || ofDist(mouseX, mouseY, 0, loc_x5, loc_y5, loc_z5)<=23 || ofDist(mouseX, mouseY, 0, loc_x6, loc_y6, loc_z6)<=23
+         || ofDist(mouseX, mouseY, 0, loc_x7, loc_y7, loc_z7)<=23 || ofDist(mouseX, mouseY, 0, loc_x8, loc_y8, loc_z8)<=23)){
         return;
     }
     Player -= 1;
@@ -453,7 +453,7 @@ void ofApp::gameClear(){
         ofSetColor(256, 256, 0);
         font2.drawString("GameClear!", 350, 384);
     }
-        return;
+    return;
 }
 
 //--------------------------------------------------------------
@@ -473,16 +473,16 @@ void ofApp::gameOver(){
         ofSetColor(256, 256, 0);
         font2.drawString("GameOver!", 350, 384);
     }
-        return;
+    return;
 }
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
-
+    
 }
 
 //--------------------------------------------------------------
 void ofApp::keyReleased(int key){
-
+    
 }
 
 //--------------------------------------------------------------
@@ -492,7 +492,7 @@ void ofApp::mouseMoved(int x, int y){
 
 //--------------------------------------------------------------
 void ofApp::mouseDragged(int x, int y, int button){
-
+    
 }
 
 //--------------------------------------------------------------
@@ -502,30 +502,30 @@ void ofApp::mousePressed(int x, int y, int button){
 
 //--------------------------------------------------------------
 void ofApp::mouseReleased(int x, int y, int button){
-
+    
 }
 
 //--------------------------------------------------------------
 void ofApp::mouseEntered(int x, int y){
-
+    
 }
 
 //--------------------------------------------------------------
 void ofApp::mouseExited(int x, int y){
-
+    
 }
 
 //--------------------------------------------------------------
 void ofApp::windowResized(int w, int h){
-
+    
 }
 
 //--------------------------------------------------------------
 void ofApp::gotMessage(ofMessage msg){
-
+    
 }
 
 //--------------------------------------------------------------
 void ofApp::dragEvent(ofDragInfo dragInfo){ 
-
+    
 }
